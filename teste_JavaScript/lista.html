@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Listas</title>
+    <script>
+        var lista_coisas = Array()
+
+        lista_coisas['Numeros'] = [10, 3, 22, 42, 19]
+        document.write(lista_coisas["Numeros"] + "<hr/>")
+
+        // ======================================================
+        lista_coisas['Frutas'] = Array('Banana','Maçã','Uva','Pera','Maracujá')
+        document.write(lista_coisas['Frutas'] + "<br> ")
+        document.write(lista_coisas['Frutas'][2] + "<hr /> ")
+
+        //Apaga o ultimo Item
+        lista_coisas['Frutas'].pop()
+        document.write(lista_coisas['Frutas'] + "<br> ")
+        document.write(lista_coisas['Frutas'][2] + "<hr /> ")
+        
+        // Apaga o primeiro item
+        lista_coisas['Frutas'].shift()
+
+        document.write(lista_coisas['Frutas'] + "<br> ")
+        document.write(lista_coisas['Frutas'][2] + "<hr /> ")
+
+        // ======================================================
+        lista_coisas['Pessoas'] = Array('Maria','João','Paulo')
+        lista_coisas['Pessoas'][3] = 'Pedro'
+
+        document.write(lista_coisas['Pessoas'] + "<br> ")
+        document.write(lista_coisas['Pessoas'][1] + "<hr /> ")
+
+        //Incluir no final
+        lista_coisas['Pessoas'].push('Miguel')
+        document.write(lista_coisas['Pessoas'] + "<br> ")
+        document.write(lista_coisas['Pessoas'][1] + "<hr /> ")
+
+        //Incluir no inicio
+        lista_coisas['Pessoas'].unshift('Carlos')
+
+        document.write(lista_coisas['Pessoas'] + "<br> ")
+        document.write(lista_coisas['Pessoas'][1] + "<hr /> ")
+
+        // Encontra a posição do item que corresponde ao que foi pesquisado
+        // Caso encontre retorna a posição, se não encontrar retorna -1
+        document.write("Em qual posição o João esta? " + lista_coisas['Pessoas'].indexOf('João'))
+        // =====================================================
+        document.write("<hr />")
+        //Coloca em ordem Alfabética
+        document.write("Lista de pessoas em Ordem Alfabética: <br>" 
+        + lista_coisas['Pessoas'].sort())
+
+        //Coloca em ordem numérica
+        document.write("<br><br>Lista de pessoas em Ordem Numérica: <br>" 
+        + lista_coisas['Numeros'].sort(ordenaNumeros) )
+
+        function ordenaNumeros(a, b){
+            return a - b
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

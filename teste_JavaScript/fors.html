@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fors</title>
+    <script>
+        /*
+        For In
+        Bom para usar quando os indicies não tiverem muita lógica para serem
+        previstos */
+        var listaConvidados = Array()
+        listaConvidados['a'] = 'Ana' 
+        listaConvidados[10] = 'Maria' 
+        listaConvidados[true] = 'Jamilton' 
+        listaConvidados['Pobre'] = 'Jorge' 
+        listaConvidados[-1] = 'José' 
+
+        for(var x in listaConvidados){
+            document.write(listaConvidados[x] + "<br />")
+        }
+        document.write("<hr>")
+        /*
+            For Each
+            Pertencente aos Arrays
+            Só le indices numéricos
+        */
+       var listaFuncionarios = ['Marcos', 'Lucas', 'Miguel', 'Viviane', 'Amanda']
+       listaFuncionarios.forEach(function(valor, indice, array){
+        if(valor == 'Viviane'){
+            array[indice] = 'Marcia'
+        }
+        document.write("indice " + indice + ' | valor ' + valor  + "<br />")
+
+        
+       })
+       document.write(listaFuncionarios[3])
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

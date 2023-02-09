@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+        var num1 = parseFloat(prompt('Digite o primeiro numero : '))
+        var op = (prompt('Digite soma ou subtração'))
+        var num2 = parseFloat(prompt('Digite o numero segundo numero: '))
+
+        document.write("A " + op + " sera entre os números " + num1 +" e " + num2 + "<br />")
+
+        function calculo(num1, num2){
+            if(op == 'soma'){
+                return num1 + num2
+            }else if(op == 'subtracao'){
+                return num1 - num2
+            } 
+        }
+
+        document.write("O resultado é: " + calculo(num1, num2))
+
+        
+        
+    </script>
+</head>
+<body>
+    
+
+    
+</body>
+</html>
