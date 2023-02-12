@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring 2</title>
+    <script>
+        // Composição
+        // é um
+        // Tem um
+        let produto = {
+            descricao: 'Notebook',
+            preco: 1800,
+            detalhes: {
+              fabricante: 'ABC',
+              modelo:'xyz'  
+            }
+        }
+        // se for array => []
+        // se for objeto => {}
+
+        // let {descricao, preco} = produto
+        
+        // let {descricao:d, preco:p} = produto
+        
+        // let {descricao:d, preco:p = 1000, desconto:ds = 5} = produto
+        let {detalhes: {fabricante: f, modelo: m}} = produto
+        //  console.log(d,p,ds)
+        console.log(f,m)
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

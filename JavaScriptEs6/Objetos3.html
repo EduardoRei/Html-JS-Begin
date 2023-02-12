@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos 3</title>
+    <script>
+        class Tv{
+            constructor(){
+                this._relacaoCanais = Array(2,4,5,7,10)
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+            // Getters and setters
+
+            get canalAtivo(){
+                return this._canalAtivo
+            }
+
+            set  canalAtivo(canal) {
+                if(this._relacaoCanais.indexOf(canal) !== -1){
+                    this._canalAtivo = canal
+                } else{
+                    console.log("Canal nao encontrado!")
+                }
+            }
+
+        }
+
+        let tv = new Tv()
+        console.log(tv.canalAtivo)
+        tv.canalAtivo = 7
+        console.log(tv.canalAtivo)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

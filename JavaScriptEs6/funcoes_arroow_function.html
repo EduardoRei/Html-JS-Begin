@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+    /*
+        let quadrado = function(x = 5){
+            return x*x;
+        }
+        */
+       /*
+        let quadrado = (x = 3) =>  x * x // Return implícito
+
+        document.write(quadrado(6)) */
+
+        /*
+        let parOuImpar = (x = 0) => {
+            if (x % 2 === 0){
+                return 'par'
+            } else if (x % 2 === 1){
+                return 'impar'
+            }
+        } */
+        // Versao melhorada
+
+        let parOuImpar = x => x % 2 === 0 ? 'par' : 'impar';
+
+        document.write(parOuImpar(13))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

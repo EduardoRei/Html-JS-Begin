@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos Literais/Estaticos</title>
+
+    <script>
+        let nome = ' Jorge'
+        let idade = 20
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function(){
+                console.log(`${this.nome}, ${this.idade}, ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+        console.log(objeto)
+        objeto.exibirResumo()
+
+        //Quando o par / Valor tiverem o mesmo nome podemos emitir
+        //Ex: Nome : Nome
+        let objeto2 = {
+            nome,
+            idade,
+            sexo,
+            profissao,
+            exibirResumo(){
+                console.log(`${this.nome}, ${this.idade}, ${this.sexo}, ${this.profissao}`)
+            }
+        }
+        console.log(objeto2)
+        objeto2.exibirResumo()
+
+        objeto2.nome = 'Marcos'
+        objeto2.idade = 23
+        objeto2.cidade = "Joinville"
+        console.log(objeto2)
+
+        objeto2.exibirResumo()
+
+        objeto2.dizerOi = () => console.log("Ola, tudo bem?")
+
+        objeto2.dizerOi()
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

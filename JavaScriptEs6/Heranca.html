@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HERANÇA</title>
+    <script>
+
+        class Animal{
+            constructor(cor, tamanho, peso){
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+
+            dormir(){
+                console.log('Dormir')
+            }
+        }
+
+        class Cachorro extends Animal{
+            constructor(orelha, cor, tamanho, peso){
+                super(cor, tamanho, peso);
+                this.orelhas = orelha
+            }
+
+            correr(){
+                console.log('Correr')
+            }
+
+
+
+            rosnar(){
+                console.log("Rosnar")
+            }
+        }
+
+        class Passaro extends Animal{
+            constructor(bico, cor, tamanho, peso){
+                super(cor, tamanho,peso)
+                this.bico = bico
+            }
+
+            voar(){
+                console.log('Voar')
+            }
+        }
+
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, bico, cor, tamanho,peso){
+                super(bico, cor, tamanho, peso)
+                this.sabeFalar = sabeFalar
+            }
+
+            falar(){
+                console.log('falar')
+            }
+
+        }
+
+        let cachorro = new Cachorro("Preto", 30, 5, "Grandes e caidas")
+        let passaro = new Passaro("Curto", "Azul", 10, 2)
+        let papagaio = new Papagaio(true, "Medio", "Verde", 18, 3)
+        let papagaio2 = new Papagaio(false, "Medio", "Branco", 8, 1)
+
+        console.log(cachorro)
+        console.log(passaro)
+        console.log(papagaio)
+        console.log(papagaio2)
+
+        /*
+        cachorro.dormir();
+        passaro.dormir();
+        papagaio.dormir();
+        papagaio.falar()
+        papagaio.voar()
+         */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

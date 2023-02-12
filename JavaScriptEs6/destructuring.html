@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring</title>
+    <script>
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Limão']
+
+        /* Muito Verboso
+        let a = frutas[0]
+        let b = frutas[1]
+        let c = frutas[2]
+        */
+        
+        // let [a,b, ,c] = frutas // Pular um indicie
+        let [a,b = 'Abobora',c,d, e = 'Banana'] = frutas // Usar o default
+
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        console.log(d)
+        console.log(e)
+
+        //  ----------------------------------------------------------------
+
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Limão'], ['Jose', 'Maria']]
+        let[,[,n2]] = coisas
+        console.log(n2)
+        let [[,,f1]] = coisas
+        console.log(f1)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
